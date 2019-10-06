@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.submission.moviecatalogsubmission3made.Detail;
+import com.submission.moviecatalogsubmission3made.DetailMovieActivity;
 import com.submission.moviecatalogsubmission3made.R;
 import com.submission.moviecatalogsubmission3made.model.Movie;
 
@@ -100,8 +100,8 @@ public class CardMovieAdapter extends RecyclerView.Adapter<CardMovieAdapter.Movi
             movie.setName(movie.getName());
             movie.setDescription(movie.getDescription());
 
-            Intent moveWithObjectIntent = new Intent(itemView.getContext(), Detail.class);
-            moveWithObjectIntent.putExtra(Detail.EXTRA_MOVIE, movie);
+            Intent moveWithObjectIntent = new Intent(itemView.getContext(), DetailMovieActivity.class);
+            moveWithObjectIntent.putExtra(DetailMovieActivity.EXTRA_MOVIE, movie);
             itemView.getContext().startActivity(moveWithObjectIntent);
         }
     }

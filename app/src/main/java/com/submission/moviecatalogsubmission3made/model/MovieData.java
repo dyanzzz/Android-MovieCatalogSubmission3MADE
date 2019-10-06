@@ -8,6 +8,7 @@ import androidx.lifecycle.LiveData;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.submission.moviecatalogsubmission3made.BuildConfig;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -18,7 +19,7 @@ import java.util.Objects;
 import cz.msebera.android.httpclient.Header;
 
 public class MovieData extends ViewModel {
-    private static final String API_KEY = "03b8bc1a8bedee74ec1f1fd81b3b39ff";
+    private static final String API_KEY = BuildConfig.TMDB_API_KEY;
     private MutableLiveData<ArrayList<Movie>> listMovies = new MutableLiveData<>();
 
     public void setMovies(final String movies) {

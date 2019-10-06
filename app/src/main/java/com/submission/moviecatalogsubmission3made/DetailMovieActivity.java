@@ -8,26 +8,20 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.bumptech.glide.Glide;
 import com.submission.moviecatalogsubmission3made.model.Movie;
 
-import java.lang.reflect.Constructor;
-
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class Detail extends AppCompatActivity {
+public class DetailMovieActivity extends AppCompatActivity {
 
     public static final String EXTRA_MOVIE = "extra_movie";
 
-    TextView tvName, tvDate, tvDescription, tvPhotoQty,
-            textDirector, directorText;
+    private TextView tvName, tvDate, tvDescription, tvPhotoQty, textDirector, directorText;
     Button buyTicket;
     private ProgressBar progressBar;
     ImageView imgPhoto;
@@ -84,24 +78,45 @@ public class Detail extends AppCompatActivity {
                         profilDirector.setVisibility(View.VISIBLE);
                         buyTicket.setVisibility(View.VISIBLE);
 
-                            Movie movie = getIntent().getParcelableExtra(EXTRA_MOVIE);
-                            String name = movie.getName();
-                            String date = movie.getDate();
-                            String category = movie.getCategory();
-                            String description = movie.getDescription();
-                            String url_image = "https://image.tmdb.org/t/p/w185" + movie.getPhoto();
+                        Movie movie = getIntent().getParcelableExtra(EXTRA_MOVIE);
 
-                            actionBar.setTitle(name);
+                        String name = null;
+                        String date = null;
+                        String category = null;
+                        String description = null;
+                        String url_image = null;
 
-                            tvName.setText(name);
-                            tvDate.setText(date);
-                            tvPhotoQty.setText(category);
-                            tvDescription.setText(description);
+                        if (movie != null) {
+                            name = movie.getName();
+                        }
 
-                            Glide.with(Detail.this)
-                                    .load(url_image)
-                                    .into(imgPhoto);
-                            progressBar.setVisibility(View.INVISIBLE);
+                        if (movie != null) {
+                            date = movie.getDate();
+                        }
+
+                        if (movie != null) {
+                            category = movie.getCategory();
+                        }
+
+                        if (movie != null) {
+                            description = movie.getDescription();
+                        }
+
+                        if (movie != null) {
+                            url_image = "https://image.tmdb.org/t/p/w185" + movie.getPhoto();
+                        }
+
+                        actionBar.setTitle(name);
+
+                        tvName.setText(name);
+                        tvDate.setText(date);
+                        tvPhotoQty.setText(category);
+                        tvDescription.setText(description);
+
+                        Glide.with(DetailMovieActivity.this)
+                                .load(url_image)
+                                .into(imgPhoto);
+                        progressBar.setVisibility(View.INVISIBLE);
 
                     }
                 });
