@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Movie Catalog Submission 3</string>
+    <string name="tab_text_1">Film</string>
+    <string name="tab_text_2">Acara TV</string>
+
+    <string name="favorite">Favorit</string>
+    <string name="share">Berbagi</string>
+    <string name="description">Keterangan</string>
+    <string name="date">Tanggal</string>
+    <string name="category">Kategori</string>
+    <string name="movie_name">Nama Film</string>
+    <string name="director">Direktur</string>
+    <string name="my_name">Dian Tri Budianto</string>
+    <string name="my_email">dian.trib@gmail.com</string>
+    <string name="order_ticket">Pesan Tiket</string>
+
+    <string name="change_language_settings">Ganti Settingan Bahasa</string>
+    <string name="_735">735</string>
+    <string name="stock">Stock</string>
+
+</resources>

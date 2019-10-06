@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Movie Catalog Submission 3</string>
+    <string name="tab_text_1">Movies</string>
+    <string name="tab_text_2">TV Shows</string>
+
+    <string name="favorite">Favorite</string>
+    <string name="share">Share</string>
+    <string name="description">Description</string>
+    <string name="date">Date</string>
+    <string name="category">Category</string>
+    <string name="movie_name">Movie Name</string>
+    <string name="director">Director</string>
+    <string name="my_name">Dian Tri Budianto</string>
+    <string name="my_email">dian.trib@gmail.com</string>
+    <string name="order_ticket">Order Ticket</string>
+
+    <string name="change_language_settings">Change Language Settings</string>
+    <string name="_735">735</string>
+    <string name="stock">Stock</string>
+    <string name="detail">Detail</string>
+</resources>
